@@ -18,6 +18,8 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * PetClinic Spring Boot Application.
@@ -26,6 +28,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
+@EnableFeignClients("org.springframework.samples.petclinic")
+@EnableDiscoveryClient
 public class PetClinicApplication {
 
     public static void main(String[] args) {
